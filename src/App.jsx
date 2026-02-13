@@ -8,24 +8,19 @@ import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import Events from './Events';
 import Contact from './Contact';
 function App() {
-  
+
 
   return (
-    <> 
+    <>
       <BrowserRouter>
-      <Header />
-      
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/about" element={<About />} />
-        <Route path='/prayer' element={<PrayerTimings/>}/>
-        <Route path='/events' element={<Events/>}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
-      </Routes>
-      
-    </BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
+
 
 export default App

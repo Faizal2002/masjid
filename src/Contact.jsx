@@ -1,9 +1,10 @@
-export default function Contact() {
+
+export default function Contact({ id }) {
   return (
-    <section className="bg-green-50 min-h-screen flex flex-col items-center justify-center p-8">
+    <section id={id} className="bg-green-50 min-h-screen flex flex-col items-center justify-center pt-16 text-sm p-8">
       
-      <div className="max-w-2xl text-center space-y-6">
-        <h1 className="text-4xl md:text-5xl font-cairo font-bold text-green-800">
+      <div className="max-w-2xl text-center space-y-6 ">
+        <h1 className="text-4xl md:text-5xl font-NotoSansArabic  text-green-800 ">
           Contact Us
         </h1>
 
