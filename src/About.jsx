@@ -2,11 +2,19 @@ import { motion } from 'framer-motion';
 
 export default function About({ id }) {
   return (
-    <section id={id} className="bg-white min-h-[80vh] flex flex-col items-center justify-center p-8 md:p-16 relative overflow-hidden">
+    <section id={id} className="min-h-[80vh] flex flex-col items-center justify-center p-8 md:p-16 relative overflow-hidden">
 
-      {/* Background Pattern or element could go here */}
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/Aboutimg.png"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/85"></div>
+      </div>
 
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

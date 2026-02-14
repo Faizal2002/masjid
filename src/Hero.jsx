@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Clock } from 'lucide-react';
 import { Link } from 'react-scroll';
 import About from "./About";
@@ -7,6 +7,10 @@ import Events from "./Events";
 import Contact from "./Contact";
 
 export default function Hero() {
+  const { scrollY } = useScroll();
+  const xRight = useTransform(scrollY, [0, 500], [0, 200]);
+  const xLeft = useTransform(scrollY, [0, 500], [0, -200]);
+
   return (
     <div id="home" className="flex flex-col w-full">
       {/* Hero Section */}
@@ -34,15 +38,14 @@ export default function Hero() {
           </motion.div>
 
           {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white font-Cairo leading-tight drop-shadow-lg"
-          >
-            Noorul Islam <br className="hidden md:block" />
-            <span className="text-green-400">Muslim Jamaath</span>
-          </motion.h1>
+          <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white font-Cairo leading-tight drop-shadow-lg flex flex-col items-center">
+            <motion.span style={{ x: xRight }} className="block">
+              Noorul Islam
+            </motion.span>
+            <motion.span style={{ x: xLeft }} className="block text-green-400">
+              Muslim Jamaath
+            </motion.span>
+          </div>
 
           {/* Subtitle / Location */}
           <motion.p
@@ -51,7 +54,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl font-Inter font-light tracking-wide"
           >
-            Vallavilai • A Sanctuary of Peace, Prayer, and Community
+            <span className="block font-bold text-2xl md:text-4xl mb-3 text-white">Vallavilai</span>
+            <span className="block text-sm md:text-lg opacity-90 mb-1">സമാധാനം, പ്രാർത്ഥന, സാമൂഹിക ഐക്യം എന്നിവയുടെ കേന്ദ്രം</span>
+            <span className="block text-sm md:text-lg opacity-90 mb-1">அமைதி, தொழுகை மற்றும் சமூக ஒற்றுமையின் இருப்பிடம்</span>
+            <span className="block text-xs md:text-sm opacity-80 font-light">A Sanctuary of Peace, Prayer, and Community</span>
           </motion.p>
 
           {/* Quick Action / Next Prayer Pill (Static Mock for now) */}

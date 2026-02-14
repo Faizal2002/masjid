@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
           <img src="/images/logo.png" className="w-10 h-10 md:w-12 md:h-12 object-contain" alt="Masjid Logo" />
           <div className="flex flex-col">
-            <h1 className={`text-xl md:text-2xl font-bold font-Cairo leading-none transition-colors duration-300 ${scrolled ? 'text-green-800' : 'text-white text-glow-green'}`}>
+            <h1 className={`text-xl md:text-2xl font-bold font-Cairo leading-none transition-colors duration-300 ${scrolled ? 'text-green-800' : 'text-white'}`}>
               Vallavilai Masjid
             </h1>
             <span className={`text-xs font-medium tracking-wide hidden sm:block transition-colors duration-300 ${scrolled ? 'text-green-600' : 'text-green-100'}`}>
@@ -58,7 +58,7 @@ export default function Header() {
               spy={true}
               offset={-80}
               activeClass="active font-bold"
-              className={`cursor-pointer transition-all py-1 relative group text-glow-green hover:text-green-400 ${!scrolled ? 'hover:text-green-300' : ''}`}
+              className={`cursor-pointer transition-all py-1 relative group hover:text-green-400 ${!scrolled ? 'hover:text-green-300' : ''}`}
             >
               {link.name}
               <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${scrolled ? 'bg-green-600' : 'bg-green-400'}`}></span>

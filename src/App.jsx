@@ -1,25 +1,20 @@
 
 import './App.css'
 import Hero from './Hero';
-import Header from './Header'
-import About from './About';
-import PrayerTimings from './Prayer';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
-import Events from './Events';
-import Contact from './Contact';
+import Header from './Header';
+import Footer from './Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
-
-
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Hero />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 
