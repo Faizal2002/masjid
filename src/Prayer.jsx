@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { Sunrise, Sun, Sunset, Moon, CloudSun } from 'lucide-react';
 
 const prayers = [
-  { name: 'Fajr', time: '5:00 AM', icon: Sunrise, status: 'Completed' },
-  { name: 'Dhuhr', time: '12:30 PM', icon: Sun, status: 'Completed' },
-  { name: 'Asr', time: '4:00 PM', icon: CloudSun, status: 'Upcoming' },
-  { name: 'Maghrib', time: '6:45 PM', icon: Sunset, status: 'Upcoming' },
-  { name: 'Isha', time: '8:00 PM', icon: Moon, status: 'Upcoming' },
+  { name: 'Fajr', time: '5:15 AM', icon: Sunrise, status: 'Completed' },
+  { name: 'Dhuhr', time: '12:30 PM', icon: Sun, status: 'Upcoming' },
+  { name: 'Asr', time: '3:45 PM', icon: CloudSun, status: 'Upcoming' },
+  { name: 'Maghrib', time: '6:15 PM', icon: Sunset, status: 'Upcoming' },
+  { name: 'Isha', time: '7:45 PM', icon: Moon, status: 'Upcoming' },
 ];
 
 export default function PrayerTimings({ id }) {

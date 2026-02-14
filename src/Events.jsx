@@ -19,7 +19,7 @@ const events = [
   {
     title: "Special Community Iftar",
     date: "15th Ramadan",
-    time: "6:30 PM",
+    time: "6:15 PM",
     description: "A gathering to break fast together as a community.",
     type: "Special"
   }

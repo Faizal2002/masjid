@@ -65,7 +65,7 @@ export default function Hero() {
               <Clock className="w-5 h-5 text-green-400 animate-pulse" />
               <div className="text-left">
                 <p className="text-xs text-green-200 uppercase tracking-wider font-semibold">Next Prayer</p>
-                <p className="text-sm font-bold text-white font-Cairo">Maghrib — 6:45 PM</p>
+                <p className="text-sm font-bold text-white font-Cairo">Dhuhr — 12:30 PM</p>
               </div>
             </div>
           </motion.div>
