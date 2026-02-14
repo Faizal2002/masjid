@@ -14,7 +14,7 @@ export default function Hero() {
         {/* Background Image with Parallax Effect */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
-          style={{ backgroundImage: "url('/src/images/masjid.jpeg')" }}
+          style={{ backgroundImage: "url('/images/masjid.jpeg')" }}
         >
           {/* Dark Overlay for Readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-green-900/90"></div>
